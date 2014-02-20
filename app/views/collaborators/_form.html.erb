@@ -1,0 +1,9 @@
+<% # [wiki, collaborator] defines post submit path (e.g. domain.com/wiki/[wiki_id/collaborator[collaborator_id] %>
+<%= form_for [wiki, collaborator], html: { class: 'form-horizontal'} do |f| %>
+	<% # User.all grabs all users %>
+	<% User.all.each do |user| %>
+		<% # "collaborator[user_id][]" tells Rails to push the user_id for this user into an array/hash called collaborator that gets pushed into the params hash; user.id populates the 'value' attribute of the checkbox element, has_collaborator? calls the has_collaborator? method in teh wiki class which checks whether this user is marked as a collaborator on this wiki %>
+		<p><%= check_box_tag "collaborator[user_id][]", user.id, wiki.has_collaborator?(user) %> <%= user.name %></p>
+	<% end %>
+	<%= f.submit "Save" %>
+<% end %>

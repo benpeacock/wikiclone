@@ -5,20 +5,7 @@
 <p><%= link_to "Edit Me", edit_wiki_path %></p>
 
 <h3>Collaborators</h3>
+<%= render "collaborators/form", wiki: @wiki, collaborator: @collaborator %>
 
-<% #Trying to make form field %>
-<%= form_for @wiki.collaborators.create, html: { class: 'form-horizontal'} do |f| %>
-	<p>Joe Smith</p><%= f.check_box_tag :user_id %>
-<% end %>
-
-
-<% #Trying to loop through users %>
-<%= @users.each do |user| %>
-	<p><%= @users.name %></p>
-<% end %>
-
-<%# form submits to collaborators/create %>
-<%# loop of User objects %>
-<%# check_box_tag that has user_id as the value for the collaborator %>
 
 

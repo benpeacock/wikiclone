@@ -6,6 +6,7 @@ class WikisController < ApplicationController
   end
 
   def show
+    @collaborator = Collaborator.new
   end
 
   def new #page where form lives
