@@ -1,5 +1,9 @@
 Wikiclone::Application.routes.draw do
 
+  resources :users
+
+  resources :collaborators
+
   resources :wikis
 
   devise_for :users

@@ -1,5 +1,24 @@
 <h1><%= @wiki.title %></h1>
+
 <% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true) %>
 <p><%= raw markdown.render(@wiki.body).html_safe %></p>
 <p><%= link_to "Edit Me", edit_wiki_path %></p>
+
+<h3>Collaborators</h3>
+
+<% #Trying to make form field %>
+<%= form_for @wiki.collaborators.create, html: { class: 'form-horizontal'} do |f| %>
+	<p>Joe Smith</p><%= f.check_box_tag :user_id %>
+<% end %>
+
+
+<% #Trying to loop through users %>
+<%= @users.each do |user| %>
+	<p><%= @users.name %></p>
+<% end %>
+
+<%# form submits to collaborators/create %>
+<%# loop of User objects %>
+<%# check_box_tag that has user_id as the value for the collaborator %>
+
 
