@@ -1,7 +1,7 @@
 <h1>All Wikis</h1>
 <table>
 	<tbody>
-		<%= @wikis.each do |wiki| %>
+		<% @wikis.each do |wiki| %>
 			<tr>
 				<td><%= link_to wiki.title %></td>
 			</tr>
