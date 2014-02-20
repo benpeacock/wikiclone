@@ -1,16 +1,16 @@
 <div class="hero-unit">
 	<h1>Wikiclone</h1>
 	<p>Social, markdown wikis</p>
-	<p><a class="btn btn-primary btn-lg" role="button">Sign Up</a></p>
+	<p><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
 
 </div>
 <div class="row">
 	<div class="span6">
 		<p class="text-center">Create as many public wikis as you want!</p>
-		<p class="text-center"><a class="btn btn-primary btn-lg" role="button">Free Plan</a></p>
+		<p class="text-center"><%= link_to "Free Plan", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
 	</div>
 	<div class="span6">
 		<p class="text-center">Create public wikis!</p>
-		<p class="text-center"><a class="btn btn-primary btn-lg" role="button">Premium Plan</a></p>
+		<p class="text-center"><%= link_to "Premium Plan", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
 	</div>
 </div>

@@ -1,3 +1,5 @@
 <h1><%= @wiki.title %></h1>
-<p><%= @wiki.body %></p>
+<% markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true) %>
+<p><%= raw markdown.render(@wiki.body).html_safe %></p>
 <p><%= link_to "Edit Me", edit_wiki_path %></p>
+
