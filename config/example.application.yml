@@ -1,0 +1,4 @@
+PUBLISHABLE_KEY: [Stripe public key]
+SECRET_KEY: [Stripe secret key]
+SENDGRID_USER: [Sendgrid username]
+SENDGRID_PASSWORD: [Sendgrid password]

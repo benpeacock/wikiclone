@@ -1,5 +1,7 @@
 Wikiclone::Application.routes.draw do
 
+  resources :charges
+
   resources :users  
 
   resources :wikis do 

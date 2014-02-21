@@ -30,6 +30,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'faker'
 gem 'redcarpet'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'figaro'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
