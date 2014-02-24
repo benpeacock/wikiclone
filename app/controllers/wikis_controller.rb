@@ -14,7 +14,7 @@ class WikisController < ApplicationController
   end
 
   def edit
-  	
+  	authorize! :update, @wiki, message: "You are not authorized."
   	# show existing wiki object in a form
   end
 

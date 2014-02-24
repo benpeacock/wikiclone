@@ -2,7 +2,8 @@ Wikiclone::Application.routes.draw do
 
   resources :charges
 
-  resources :users  
+  # Leaving routing for Users off so that devise picks it up instead.
+  # resources :users
 
   resources :wikis do 
     resources :collaborators

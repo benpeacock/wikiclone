@@ -4,8 +4,10 @@
 <p><%= raw markdown.render(@wiki.body).html_safe %></p>
 <p><%= link_to "Edit Me", edit_wiki_path %></p>
 
-<h3>Collaborators</h3>
-<%= render "collaborators/form", wiki: @wiki, collaborator: @collaborator %>
+<% if can? :manage, @collaborators %>
+	<h3>Collaborators</h3>
+	<%= render "collaborators/form", wiki: @wiki, collaborator: @collaborator %>
+<% end %>
 
 
 

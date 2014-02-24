@@ -6,6 +6,7 @@ class CollaboratorsController < ApplicationController
   end
 
   def create
+    authorize! :create, Collaborator
     @wiki.collaborators.destroy_all
     collaborators = []
     params[:collaborator][:user_id].each do |user_id|
