@@ -33,6 +33,7 @@ gem 'redcarpet'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
 gem 'cancan'
+gem 'friendly_id'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
