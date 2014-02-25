@@ -12,14 +12,14 @@
 			<%= f.text_area :body, rows: 8 %>
 		</div>
 	<% end %>
-	<% #if @user.role == 'premium_member' %>
+	<% if current_user.role? :premium_member %>
 		<%= control_group_tag(@wiki.errors[:private]) do %>
 			<%= f.label :private, class: 'control-label' %>
 			<div class="controls">
 				<%= f.check_box :private %>
 			</div>
 		<% end %>
-	<% #end %>
+	<% end %>
 	<div class="control-group">
         <div class="controls">
           <%= f.submit "Save", class: 'btn' %>

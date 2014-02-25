@@ -19,6 +19,10 @@ class ChargesController < ApplicationController
 	    :currency    => 'usd'
 	  )
 
+	 # check if charge is present? 
+	 # if so, update attribute on member to make premium
+	 current_user.update_attribute(:role, 'premium_member') if charge
+
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
 	  redirect_to charges_path
